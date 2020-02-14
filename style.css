@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    padding: 0 30px 0 30px;
+} 
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://rayyansecutech.com/wp-content/uploads/2018/02/RST-Laptop-Dark.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/****************************
+Start Header
+**************************/
+
+nav{
+    height: 80px;
+    width: 100%;
+    background: #34495e;
+}
+label.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin-right: 0 8px;
+    line-height: 80px;
+}
+nav a{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+a.active,a:hover{   
+    transition: .5s;
+    border: 1px solid white;
+}
+nav #icon{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 1048px){
+    label.logo{
+        font-size: 32px;
+        padding-left: 60px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 17px;
+    }
+}
+@media (max-width: 909px){
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2f3640;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20px;
+    }
+    a.active,a:hover{
+        border: none;
+        color: #3498db;
+    }
+    nav ul.show{
+        left: 0;
+    }
+
+}
+
+.profile-image{
+    width: 450px;
+    height: 50%;
+    margin-top: 50px;
+}
+/********HOME***************************/
+
+.welcome-text{
+    position: absolute;
+    width: 600px;
+    height: auto;
+    margin: 20% 30%;
+    text-align: center;
+}
+.welcome-text h1{
+    text-align: center;
+    color:lightgray;
+    padding-top: 0%;
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.welcome-text a{
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #fff;
+}
+.welcome-text a:hover{
+    background: #fff;
+    color: #000;
+}
+
+/******Skills***********************/
+.inner{
+    padding-top: 20px;
+}
+.header{
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+}
+.header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: #2ecc71;
+}
+.container{
+    display: flexbox;
+    grid-template-columns: repeat(3);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+.skill-box{
+    padding: 1rem;
+    color: #ddd;
+    cursor: pointer;
+}
+.skill-box:hover > .skill-title:after .skill-box:hover .skill-title:before{
+    width: 35px;    
+}
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.skill-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 35px;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: #2ecc71;
+    transition: .5s;
+}
+.skill-title:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 35px;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #2ecc71;
+    transition: .5s;
+}
+img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 45px;
+}
+.skill-title h3{
+    color: #fff;
+    margin: 0.5rem;
+}
+   
+
+/*************About Me****************/
+
+#about {
+    padding: 5rem 0;
+}
+#about h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+#about h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#about p.lead{
+    margin-bottom: 1rem;
+}
+#about-me .about-text,
+#about .about-image{
+    flex: 1;
+}
+#about .about-text{
+    text-align: center;
+}
+#about .about-image img{
+    margin-left: auto;
+    width: 75%;
+    border-radius: 40%;
+    margin-top: 60px;
+}
+
+
+
+
+
+
+/*****FOOTER*****************************/
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
+#about img
+{
+   margin-top: 100px; 
+}
+#about h3
+{
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+}
+#about
+{
+    color: white;
+    font-size: 30px;
+}
+/************Contact**********/
+
+.contact-form{
+    width: 85%;
+    max-width: 600px;
+    background: #f1f1f1;
+    position: absolute ;
+    top: 150px;
+    left:400px;
+    transform: translate(-505,-50%);
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 20px #000000b3;
+}
+.contact-form h1{
+    margin-top: 0;
+    font-weight: 200;
+}
+.txtb{
+    border: 1px solid gray;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+.txtb label {
+    display: block;
+    text-align: left;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.txtb input,.txtb textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size:18px;
+    margin-top: 6px;
+
+}
+.btn {
+    display: inline-block;
+    background: #34495e;
+    padding: 14px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+}
+/*portfolio*/
+.section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.section-title h1{
+    font-size: 35px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700px;
+    color: #000000;
+    margin: 0px 0px 10px;
+    position: relative;
+}
+.section-title h1::before{
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 2px;
+    right: 30px;
+    background-color: #34495e;
+    bottom: 0px;
+}
+.text-uppercase{
+    text-transform: uppercase!important;
+}
+.section-title p.small{
+    display: block;
+    font-size: 14px ;
+    color: #838383;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.portfolio{
+    background-color:#f5f8fd;
+    padding: 100px 0px 70px;
+}
+.portfolio .portfolio-content h1:before{
+    left: 30%;
+}
+.portfolio .portfolio-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.portfolio .portfolio-content .box{
+    background-color: #FFFFFF;
+    padding: 30px;
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    margin-bottom: 30px;
+    border: 1px solid #EEEEEE;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+.portfolio .portfolio-content .box::before{
+       content: "";
+       height: 2px;
+       background-color: #34495e;
+       position: absolute;
+       bottom: 0px;
+       width: 50px;
+       left: 0;
+       right: 0;
+       margin: auto;
+       transition: all .5s ease;
+}
+.portfolio-content .box:hover::before{
+     width:100%;
+}
+.portfolio .portfolio-content .box .icon{
+    height: 60px;
+    width: 60px;
+    background-color: #34495e;
+    margin: 15px auto 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+.portfolio .portfolio-content .box .icon .fa{
+    font-size:25px ;
+    color: #FFFFFF;
+    line-height: 60px;
+}
+.portfolio .portfolio-content .box h5{
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+}
+.portfolio .portfolio-content .box p{
+    font-size:15px ;
+    font-weight: 400;
+    line-height: 24px;
+    color: #838383;
+    margin: 10px 0 10px;
+}
+
+.sk{
+    padding-top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
