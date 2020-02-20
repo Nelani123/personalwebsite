@@ -12,7 +12,7 @@ html{
     padding: 0 30px 0 30px;
 } 
 body{
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
     line-height: 1.5;
@@ -152,6 +152,7 @@ nav #icon{
 }
 
 /******Skills***********************/
+
 .inner{
     padding-top: 20px;
 }
@@ -172,7 +173,7 @@ nav #icon{
     background-color: #2ecc71;
 }
 .container{
-    display: flexbox;
+    display: flex;
     grid-template-columns: repeat(3);
     justify-content: center;
     align-items: center;
@@ -186,7 +187,7 @@ nav #icon{
     color: #ddd;
     cursor: pointer;
 }
-.skill-box:hover > .skill-title:after .skill-box:hover .skill-title:before{
+.skill-box:hover :before{
     width: 35px;    
 }
 .skill-title{
@@ -197,7 +198,7 @@ nav #icon{
     margin-bottom: 0.5rem;
     position: relative;
 }
-.skill-title:after{
+.skill-title :after{
     content: '';
     position: absolute;
     bottom: 0;
@@ -208,7 +209,7 @@ nav #icon{
     background-color: #2ecc71;
     transition: .5s;
 }
-.skill-title:before{
+.skill-title :before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -237,67 +238,25 @@ img::after{
 
 /*************About Me****************/
 
-#about {
-    padding: 5rem 0;
+#about-me h2{
+    margin-bottom: 25px;
+    color: white;
+    font-size: 60px;
 }
-#about h2{
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 3rem;
+#about-me p{
+    color: white;
+    font-size: 20px;
 }
-#about h3{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-#about p.lead{
-    margin-bottom: 1rem;
-}
-#about-me .about-text,
-#about .about-image{
-    flex: 1;
-}
-#about .about-text{
-    text-align: center;
-}
-#about .about-image img{
-    margin-left: auto;
-    width: 75%;
-    border-radius: 40%;
-    margin-top: 60px;
-}
-
-
-
-
-
-
-/*****FOOTER*****************************/
-
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
+.img-wrap{
     width: 100%;
-    background-color: #34495e;
-    color: white;
-    text-align: center;
-    padding: 1%;
 }
-#about img
-{
-   margin-top: 100px; 
+.img-wrap img{
+    width: 400px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #999999;
 }
-#about h3
-{
-    color: white;
-    font-size: 50px;
-    font-weight: 600;
-}
-#about
-{
-    color: white;
-    font-size: 30px;
-}
+
 /************Contact**********/
 
 .contact-form{
@@ -351,7 +310,9 @@ img::after{
     margin-top: 8px;
     width: 100%;
 }
+
 /*portfolio*/
+
 .section-title{
     flex: 0 0 100%;
     max-width: 100%;
@@ -456,15 +417,31 @@ img::after{
     padding-top: 20%;
 }
 
+/************Footer***************/
 
 
+.footer{
+    position: fixed;
+    bottom: 0;
+    height: 11%;
+    width: 100%;
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 50em;
+}
+.social-media{
+    margin: 2px 0;
 
-
-
-
-
-
-
+}
+.social-media a{
+    color: #001a21;
+    margin-right: 25px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .3s linear;
+}
 
 
 
